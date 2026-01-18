@@ -1,0 +1,43 @@
+name: services
+description: A new Flutter package project providing services.
+publish_to: none
+#version: 0.0.1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  connectivity_plus: ^6.1.4
+  shared_preferences: ^2.0.18
+  dio: ^5.0.1
+  dio_cookie_manager: ^3.1.0+1
+  path_provider: ^2.1.1
+  reactiv: ^1.1.0
+  open_file: ^3.5.10
+  collection: ^1.18.0
+  cookie_jar: ^4.0.8
+  web_socket_channel: ^3.0.3
+  googleapis_auth: ^2.0.0
+  app_settings: ^6.1.1
+
+  intl: ^0.20.2
+  graphics:
+    path: ../graphics
+  domain:
+    path: ../domain
+
+
+  flutter:
+    sdk: flutter
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
