@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'infrastructure/navigation/navigation.dart';
 import 'infrastructure/theme/theme.dart';
 import 'initialize_app.dart';
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
       routerConfig: Nav.goRoutes,
       debugShowCheckedModeBanner: false,
       theme: AppThemes.lightTheme(),
-      // themeMode: ThemeMode.dark,
     );
   }
 }
