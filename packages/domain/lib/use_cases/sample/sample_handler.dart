@@ -5,16 +5,16 @@ import 'package:services/network_state_manager/network_state/service_state_manag
 class SampleHandler with ServiceStateMixin<List<PhotosData>> {
   SampleHandler();
 
-  final photos = ReactiveList<PhotosData>([]);
-
   Future<ServiceResponse<List<PhotosData>>> fetchSampleData() async {
     return serviceObserver(() async {
-      final response = await SampleDao.instance.getSampleData();
+      final response = await SampleRepository.instance.getSampleData();
       List<PhotosData> photosData = [];
       if (response.status.isSuccess) {
         photosData = response.data?.photos ?? [];
+        return ServiceResponse.success(data: photosData);
+      } else {
+        return ServiceResponse(status: response.status);
       }
-      return ServiceResponse.success(data: photosData);
     });
   }
 }

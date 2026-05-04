@@ -1,10 +1,10 @@
 import 'package:domain/models/responses/sample_response.dart';
 import 'package:services/data_providers/data_providers.dart';
 
-class SampleDao {
-  SampleDao._();
+class SampleRepository {
+  SampleRepository._();
 
-  static final instance = SampleDao._();
+  static final instance = SampleRepository._();
 
   Future<ServiceResponse<SampleResponse>> getSampleData() async {
     final response = await RestApi.instance.get('/sample-data/photos');
